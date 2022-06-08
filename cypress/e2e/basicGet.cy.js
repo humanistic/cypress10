@@ -4,7 +4,7 @@ describe('CI of Replpad Rx App', () => {
     cy.get('.input').type('import @rx{enter}')
     cy.get('.stdout').should('contain','Enter your name as appears on a prescription:')
     cy.get('.input').type('Graham Chiu')
-    cy.get('.stdout').should('contain','Enter your prescriber ID number:')
+    cy.get('.stdout').eq(11).should('contain','Enter your prescriber ID number:')
     cy.get('.input').type('1234567{enter}')
   })
 }) 
