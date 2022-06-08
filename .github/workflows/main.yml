@@ -5,6 +5,7 @@ jobs:
   cypress-run:
     # OS
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Checkout
         # checks-out your repository so your workflow can access it
@@ -14,4 +15,3 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           config-file: cypress.config.js
-          timeout-minutes: 5
