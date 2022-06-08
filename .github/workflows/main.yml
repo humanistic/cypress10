@@ -11,6 +11,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Configure Cypress for dashboard
         run: |
+           npm install
            npx cypress run --record --key 35447304-b1bd-474a-a624-131a4da21d29
       - name: Run Cypress Tests
         # GitHub Action for running Cypress end-to-end tests
