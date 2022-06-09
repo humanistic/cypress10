@@ -19,8 +19,9 @@ describe('Rx replpad App continous integration', () => {
     cy.get('.input:focus').type('Male{enter}')
     cy.get('.input:focus').type('y{enter}')
     cy.get('.input:focus').type("rx 'mtx{enter}")
-    cy.contains('Which schedule to use?') // .type('1{enter}')
-    // cy.find('.input:focus').type('1{enter}')
+    cy.contains('Which schedule to use?').next().type('1{enter}')
+    cy.wait(2000)
+    cy.get('.line').last().find('.input').type('write-rx{enter}')
+    cy.contains('For email?').next().type('y{enter}')
   })
 }) 
-
