@@ -1,9 +1,9 @@
-describe('CI of Replpad Chess App', () => {
+describe('Chess App on replpad continuous integration', () => {
   it('Visits Replpad', () => {
     cy.visit('http://hostilefork.com/media/shared/replpad-js/')
     cy.get('.input').type('do @chess{enter}')
     cy.wait(1000)
-    cy.get('.input').eq(1).type('print reverse "ETELPMOC TSET"{enter}')
+    cy.get('.input').eq(0).type('print reverse "ETELPMOC TSET"{enter}')
     cy.get('.stdout').should('contain','TEST COMPLETE')
   })
 }) 
