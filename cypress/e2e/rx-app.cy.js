@@ -1,9 +1,10 @@
-describe('Replpad Rx App continous integration', () => {
+describe('Rx replpad App continous integration', () => {
   it('Visits Replpad', () => {
     cy.visit('http://hostilefork.com/media/shared/replpad-js/')
     cy.get('.input').type('import @rx{enter}')
     cy.get('.stdout').should('contain','Enter your name as appears on a prescription:')
-    cy.get('.input').type('Graham Chiu')
+    cy.get('.input:focus').type('Graham Chiu{enter}')
+    cy.get('.input:focus').type('1234567{enter}')
     cy.get('.input:focus').type('y{enter}')
     cy.get('.input:focus').type('n{enter}')
     cy.get('.input:focus').type('ABC1234{enter}')
@@ -13,9 +14,13 @@ describe('Replpad Rx App continous integration', () => {
     cy.get('.input:focus').type('1-Jan-1920{enter}')
     cy.get('.input:focus').type('88 Baker Street{enter}')
     cy.get('.input:focus').type('Kensington{enter}')
+    cy.get('.input:focus').type('London{enter}')
     cy.get('.input:focus').type('04 123456{enter}')
     cy.get('.input:focus').type('Male{enter}')
     cy.get('.input:focus').type('y{enter}')
+    cy.get('.input:focus').type("rx 'mtx{enter}")
+    cy.contains('Which schedule to use?') // .type('1{enter}')
+    // cy.find('.input:focus').type('1{enter}')
   })
 }) 
 
