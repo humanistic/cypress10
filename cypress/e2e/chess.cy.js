@@ -4,6 +4,7 @@ describe('Chess App on replpad continuous integration', () => {
     cy.get('.input').type('do @chess{enter}')
     cy.wait(1000)
     cy.contains('chess>>').type('print reverse "ETELPMOC TSET"{enter}')
+    cy.contains('TEST COMPLETE')
     // cy.get('.input').eq(0).type('print reverse "ETELPMOC TSET"{enter}')
     // cy.get('.stdout').should('contain','TEST COMPLETE')
   })
