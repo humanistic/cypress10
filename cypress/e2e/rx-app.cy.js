@@ -13,7 +13,9 @@ describe('Replpad Rx App continous integration', () => {
     cy.get('.input:focus').type('1-Jan-1920{enter}')
     cy.get('.input:focus').type('88 Baker Street{enter}')
     cy.get('.input:focus').type('Kensington{enter}')
-    cy.get('.input:focus').type('London{enter}')
+    cy.get('.input:focus').type('04 123456{enter}')
+    cy.get('.input:focus').type('Male{enter}')
+    cy.get('.input:focus').type('y{enter}')
   })
 }) 
 
