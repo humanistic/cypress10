@@ -7,6 +7,6 @@ describe('Chess App on replpad continuous integration', () => {
     el.type('chiu-vs-jensen{enter}')
     // cy.contains('chess>>').type('chiu-vs-jensen{enter}')
     cy.wait(30000)
-    cy.contains('Thanks Kaj!')
+    cy.contains('Thanks Kai!')
   })
 }) 
