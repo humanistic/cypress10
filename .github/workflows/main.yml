@@ -9,11 +9,11 @@ jobs:
       - name: Checkout
         # checks-out your repository so your workflow can access it
         uses: actions/checkout@v2
-      - name: Run Replpad using Firefox
+      - name: Run Replpad using Chrome
         # GitHub Action for running Cypress end-to-end tests
         uses: cypress-io/github-action@v4
         with:
-          browser: firefox
+          browser: chrome
           config-file: cypress.config.js
           record: true
         env:
@@ -22,11 +22,11 @@ jobs:
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
-      - name: Run Replpad using Chrome
+      - name: Run Replpad using Firefox
         # GitHub Action for running Cypress end-to-end tests
         uses: cypress-io/github-action@v4
         with:
-          browser: chrome
+          browser: firefox
           config-file: cypress.config.js
           record: true
         env:
