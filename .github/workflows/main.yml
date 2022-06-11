@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         # checks-out your repository so your workflow can access it
         uses: actions/checkout@v2
-      - name: Configure Cypress for dashboard
+#     - name: Configure Cypress for dashboard
 #        run: |
 #           npm install
 #           npx cypress run --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
