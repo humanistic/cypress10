@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        checks-out your repository so your workflow can access it
+        # checks-out your repository so your workflow can access it
         uses: actions/checkout@v2
       - name: Configure Cypress for dashboard
         run: |
