@@ -9,15 +9,24 @@ jobs:
       - name: Checkout
         # checks-out your repository so your workflow can access it
         uses: actions/checkout@v2
-#     - name: Configure Cypress for dashboard
-#        run: |
-#           npm install
-#           npx cypress run --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
-      - name: Run Cypress Tests
+      - name: Run Replpad using Firefox
         # GitHub Action for running Cypress end-to-end tests
         uses: cypress-io/github-action@v4
         with:
           browser: firefox
+          config-file: cypress.config.js
+          record: true
+        env:
+          # pass the Dashboard record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          # pass GitHub token to allow accurately detecting a build vs a re-run build
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Run Replpad using Chrome
+        # GitHub Action for running Cypress end-to-end tests
+        uses: cypress-io/github-action@v4
+        with:
+          browser: chrome
           config-file: cypress.config.js
           record: true
         env:
