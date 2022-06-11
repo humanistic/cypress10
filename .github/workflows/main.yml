@@ -13,8 +13,8 @@ jobs:
         run: |
            npm install
            npx cypress run --record --key 35447304-b1bd-474a-a624-131a4da21d29
-      - name: Run Cypress Tests
+      # - name: Run Cypress Tests
         # GitHub Action for running Cypress end-to-end tests
-        uses: cypress-io/github-action@v4
-        with:
-          config-file: cypress.config.js
+     #   uses: cypress-io/github-action@v4
+     #   with:
+     #     config-file: cypress.config.js
