@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Checkout
         # checks-out your repository so your workflow can access it
-        uses: actions/checkout@v2
-      - name: Configure Cypress for dashboard
+        # uses: actions/checkout@v2
+      # - name: Configure Cypress for dashboard
         run: |
            npm install
            npx cypress run --record --key 35447304-b1bd-474a-a624-131a4da21d29
